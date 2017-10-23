@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Materials</title>
+</head>
+<body>
+<ol>
+    <li th:each="material : ${materials}">
+        <a th:href="@{/materials/{id}(id=${material.ID})}">
+            <span th:text="${material.name}"></span></a>
+    </li>
+</ol>
+</body>
+</html>

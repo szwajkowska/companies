@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Main</title>
+    <script type="text/javascript" src="/confirm.js"></script>
+</head>
+<body>
+<div th:if="${param.restore_data}">
+    Data restored
+    <br>
+    <br>
+</div>
+<p><a href="/companies">Companies</a></p>
+    <button th:onclick="'confirmRestoring()'">Restore data</button>
+</body>
+</html>
+

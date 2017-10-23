@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <title>MaterialDetails</title>
+</head>
+<body>
+<div th:if="${param.price_error}">
+    Wrong price format
+    <br>
+    <br>
+</div>
+<div><label>Description:
+    <span th:text="${materialDetails.description}"></span>
+</label></div>
+
+<div><label>Notes:
+    <span th:text="${materialDetails.notes}"></span>
+</label></div>
+
+<div><label>Supplier:
+    <span th:text="${materialDetails.supplier}"></span>
+</label></div>
+
+<div><label>Price:
+    <span th:text="${materialDetails.price}"></span>
+</label></div>
+
+<div><label>Currency:
+    <span th:text="${materialDetails.currency}"></span>
+</label></div>
+
+<div><label>ID:
+    <span th:text="${materialDetails.ID}"></span>
+</label></div>
+<br>
+<br>
+<br>
+<form th:action="@{/materials/description/{id}(id=${materialDetails.ID})}"  method="post">
+    <div><label> Change description:
+        <input type="text" name="description"/><input type="submit" value="Change"/>
+    </label></div>
+</form>
+
+<form th:action="@{/materials/notes/{id}(id=${materialDetails.ID})}"  method="post">
+    <div><label> Change notes:
+        <input type="text" name="notes"/><input type="submit" value="Change"/>
+    </label></div>
+</form>
+
+<form th:action="@{/materials/supplier/{id}(id=${materialDetails.ID})}"  method="post">
+    <div><label> Change supplier:
+        <input type="text" name="supplier"/><input type="submit" value="Change"/>
+    </label></div>
+</form>
+
+<form th:action="@{/materials/price/{id}(id=${materialDetails.ID})}"  method="post">
+    <div><label> Change price:
+        <input type="text" name="price"/><input type="submit" value="Change"/>
+    </label></div>
+</form>
+
+<form th:action="@{/materials/currency/{id}(id=${materialDetails.ID})}"  method="post">
+    <div><label> Change currency:
+        <input type="text" name="currency"/><input type="submit" value="Change"/>
+    </label></div>
+</form>
+<br>
+<a href="/">To restore previous data come back to the home page</a>
+
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Companies</title>
+</head>
+<body>
+<h3>Choose the company to see company materials</h3>
+<ol>
+    <li th:each="company : ${companies}">
+        <a th:href="@{/companies/{id}(id=${company.companyID})}"><span th:text="${company.companyName}"></span></a>
+    </li>
+</ol>
+</body>
+</html>
+
