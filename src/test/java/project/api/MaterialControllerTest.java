@@ -161,35 +161,6 @@ public class MaterialControllerTest extends ControllerTest {
 
         Assertions.assertThat(materialDetails.getPrice()).isEqualTo(1);
     }
-
-//    @Test
-//    public void shouldRestoreData() throws Exception{
-//        //given
-//        Material material1 = new Material(1, "x", 11);
-//        Material material2 = new Material(2, "y", 11);
-//        Material material3 = new Material(3, "z", 33);
-//        List<Material> materials = new ArrayList<>();
-//        materials.add(material1);
-//        materials.add(material2);
-//        materials.add(material3);
-//
-//        given(this.webService.getMaterials()).willReturn(materials);
-//
-//        //when
-//        material1.setName("xyz");
-//        List<Material> materialList = this.webService.getMaterials();
-//
-//        //then
-//        Assertions.assertThat(materialList.get(0).getName()).isEqualTo("xyz");
-//
-//        mockMvc.perform(
-//                MockMvcRequestBuilders.post("/materials"))
-//                .andExpect(status().isOk());
-//
-//        Assertions.assertThat(materialList.get(0).getName()).isEqualTo("x");
-//
-//    }
-
 }
 
 
